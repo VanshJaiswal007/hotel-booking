@@ -21,7 +21,7 @@ const handleClick = async (e) => {
     e.preventDefault()
     dispatch({type:"LOGIN_START"})
     try{
-        const res = await axios.post("http://localhost:8000/api/auth/login",credentitals)
+        const res = await axios.post("https://hotel-booking-2-dlce.onrender.com/api/auth/login",credentitals)
         dispatch({type:"LOGIN_SUCCESS",payload:res.data.details})
         navigate("/")
     }catch(err){

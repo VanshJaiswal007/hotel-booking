@@ -24,7 +24,7 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
   const [openModal,setOpenModal]= useState(false)
-  const{data,loading,error} = useFetch(`http://localhost:8000/api/hotels/find/${id}`)
+  const{data,loading,error} = useFetch(`https://hotel-booking-2-dlce.onrender.com/api/hotels/find/${id}`)
   const navigate = useNavigate()
   const photos = [
     {

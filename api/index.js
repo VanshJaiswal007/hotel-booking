@@ -7,6 +7,7 @@ import hotelsRoute from "./routes/hotels.js";
 import roomsRoute from "./routes/rooms.js";
 import cookieParser from "cookie-parser"
 import cors from "cors"
+const port = process.env.PORT || 4000;
 env.config();
 const app=express()
 app.use(cors());
@@ -48,7 +49,7 @@ app.get('/',(req,res)=>{
     res.send('hello')
 })
 
-app.listen(8000,()=>{
+app.listen(port,()=>{
     connect();
     console.log("backend is connected")
 })
